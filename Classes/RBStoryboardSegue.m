@@ -51,11 +51,11 @@
 
 - (id)initWithIdentifier:(NSString *)identifier source:(UIViewController *)source destination:(UIViewController *)destination
 {
-    NSAssert([destination isKindOfClass:[RBStoryboardLink class]], @"RBStoryboardSegue can only be used with a RBStoryboardLink as seque destination.");
+    //NSAssert([destination isKindOfClass:[RBStoryboardLink class]], @"RBStoryboardSegue can only be used with a RBStoryboardLink as segue destination.");
     
-    UIViewController * newDestination = [[self class] viewControllerFromLink:(RBStoryboardLink *)destination];
+    //UIViewController * newDestination = [[self class] viewControllerFromLink:(RBStoryboardLink *)destination];
     
-    if ((self = [super initWithIdentifier:identifier source:source destination:newDestination])) {
+    if ((self = [super initWithIdentifier:identifier source:source destination:destination])) {
         _animated = YES;
     }
     
